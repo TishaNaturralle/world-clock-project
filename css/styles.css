@@ -2,6 +2,10 @@ body{
     background-color: rgb(244, 218, 223);
 }
 
+.container{
+    background-color: aliceblue;
+}
+
 h1, footer{
     text-align: center;
 }
