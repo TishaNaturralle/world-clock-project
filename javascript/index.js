@@ -26,7 +26,7 @@ let zurichTimeElement = zurichElement.querySelector(".time");
 let zurichTime = moment().tz("Australia/Perth");
 
 zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
-zurichTimeElement.innerHTML = zurichTime.format("h:mm:ss [<small>]A[</small>]");
+zurichTimeElement.innerHTML = zurichTime.format("h:mm:ss SS [<small>]A[</small>]");
 }
 
 
