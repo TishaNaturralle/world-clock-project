@@ -11,10 +11,10 @@ let parisTime = moment().tz("Europe/Paris");
 parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
 parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 }
-}
+
 //Harare
 let harareElement = document.querySelector("#harare");
-if (harareElement){
+if (harareElement) {
 let harareDateElement = harareElement.querySelector(".date");
 let harareTimeElement = harareElement.querySelector(".time");
 let harareTime = moment().tz("Africa/Harare");
@@ -33,9 +33,10 @@ let zurichTime = moment().tz("Australia/Perth");
 zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
 zurichTimeElement.innerHTML = zurichTime.format("h:mm:ss [<small>]A[</small>]");
 }
+}
 
 
-function updateCity(event){
+function updateCity(event) {
     let cityTimeZone = event.target.value;
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
@@ -55,5 +56,4 @@ updateTime()
 setInterval(updateTime, 1)
 
 let citiesSelectElement = document.querySelector("#city");
-
 citiesSelectElement.addEventListener("change", updateCity);
